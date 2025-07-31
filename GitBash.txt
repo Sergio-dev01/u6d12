@@ -1,0 +1,199 @@
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (main)
+$ git checkout -b test
+Switched to a new branch 'test'
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (test)
+$ git add .
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (test)
+$ git commit -m "commit fatto"
+[test ce322cb] commit fatto
+ 3 files changed, 11 insertions(+)
+ create mode 100644 index.html
+ create mode 100644 index.js
+ delete mode 100644 nuovoFile.txt
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (test)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (main)
+$ git merge test
+Updating 42085c0..ce322cb
+Fast-forward
+ index.html    | 9 +++++++++
+ index.js      | 2 ++
+ nuovoFile.txt | 0
+ 3 files changed, 11 insertions(+)
+ create mode 100644 index.html
+ create mode 100644 index.js
+ delete mode 100644 nuovoFile.txt
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (main)
+$ git add index.html
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (test)
+$ git commit -m "Modifica su main"
+[test f2f7f20] Modifica su main
+ 1 file changed, 1 insertion(+)
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (test)
+$ git checkout test
+Already on 'test'
+Your branch is ahead of 'origin/test' by 1 commit.
+  (use "git push" to publish your local commits)
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (test)
+$ git add .
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (test)
+$ git add .
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (test)
+$ git commit -m "Modifica su test"
+[test ec1ac16] Modifica su test
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+ create mode 100644 style.css
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (test)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (main)
+$ git merge test
+Updating ce322cb..ec1ac16
+Fast-forward
+ index.html | 1 +
+ style.css  | 2 ++
+ 2 files changed, 3 insertions(+)
+ create mode 100644 style.css
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (main)
+$ git checkout main
+Already on 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (main)
+$ git add index.html
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (main)
+$ git commit -m "Modifica su main2"
+[main 45b500e] Modifica su main2
+ 1 file changed, 1 insertion(+)
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (main)
+$ git checkout test
+Switched to branch 'test'
+Your branch is ahead of 'origin/test' by 2 commits.
+  (use "git push" to publish your local commits)
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (test)
+$ git add index.html
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (test)
+$ git commit -m "Modifica su test"
+[test f5a87db] Modifica su test
+ 1 file changed, 1 insertion(+)
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (test)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (main)
+$ git merge test
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (main|MERGING)
+$ git add index.html
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (main|MERGING)
+$ git commit -m "Risolto conflitto tra main e test"
+[main 76ab851] Risolto conflitto tra main e test
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (main)
+$ git branch -d test
+warning: not deleting branch 'test' that is not yet merged to
+         'refs/remotes/origin/test', even though it is merged to HEAD
+error: the branch 'test' is not fully merged
+hint: If you are sure you want to delete it, run 'git branch -D test'
+hint: Disable this message with "git config set advice.forceDeleteBranch false"
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (main)
+$ git branch -d test
+warning: not deleting branch 'test' that is not yet merged to
+         'refs/remotes/origin/test', even though it is merged to HEAD
+error: the branch 'test' is not fully merged
+hint: If you are sure you want to delete it, run 'git branch -D test'
+hint: Disable this message with "git config set advice.forceDeleteBranch false"
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (main)
+$ git branch -D test
+Deleted branch test (was f5a87db).
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (main)
+$ git tag -a v1.0 -m "Release 1.0"
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (main)
+$ git tag v1-0-2
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (main)
+$ git branch --no-merged
+
+sergi@DESKTOP-HCMLHRL MINGW64 ~/Desktop/Epicode/u6d12 (main)
+$ git log
+commit 76ab8516c055eb2fc55b1a46256f3f09a25d97df (HEAD -> main, tag: v1.0)
+Merge: 45b500e f5a87db
+Author: Sergio-dev01 <sergio.develoop@gmail.com>
+Date:   Thu Jul 31 16:12:39 2025 +0200
+
+    Risolto conflitto tra main e test
+
+commit f5a87dbab936e80bb6c36fc81f58f35e465350a6
+Author: Sergio-dev01 <sergio.develoop@gmail.com>
+Date:   Thu Jul 31 16:11:44 2025 +0200
+
+    Modifica su test
+
+commit 45b500eda7c405503eef7889603a004dbc13c02c
+Author: Sergio-dev01 <sergio.develoop@gmail.com>
+Date:   Thu Jul 31 16:11:22 2025 +0200
+
+    Modifica su main2
+
+commit ec1ac16f9a630c91d13db59fa61aa50e9a19f29b
+Author: Sergio-dev01 <sergio.develoop@gmail.com>
+Date:   Thu Jul 31 16:10:09 2025 +0200
+
+    Modifica su test
+
+commit f2f7f20aa3ac72b12eaf54e5b30dbce1532dfce8
+Author: Sergio-dev01 <sergio.develoop@gmail.com>
+Date:   Thu Jul 31 16:08:25 2025 +0200
+
+    Modifica su main
+
+commit ce322cb7e21698ca02cf9640f4fc845a6322cde7 (origin/test, origin/main, origin/HEAD)
+Author: Sergio-dev01 <sergio.develoop@gmail.com>
+Date:   Thu Jul 31 16:05:09 2025 +0200
+
+    commit fatto
+
+commit 42085c0d17ab060d204e7394ee0de9877d03e7f5
+Author: Sergio-dev01 <sergio.develoop@gmail.com>
+Date:   Thu Jul 31 15:56:22 2025 +0200
+
+    commit aggiunto
+
+commit 7ce90540e3ee45805c829d831936e41fb1ee0f86
+Author: Sergio-dev01 <sergio.develoop@gmail.com>
+Date:   Thu Jul 31 15:46:58 2025 +0200
+
+    Initial commit
+(END)
